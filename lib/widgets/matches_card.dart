@@ -3,9 +3,12 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
 import 'package:football_app/core/decoration_const/box_decoration.dart';
+import 'package:football_app/models/todays_match.dart';
 
 
 class MatchesCard extends StatelessWidget {
+  TodaysMatch match;
+  MatchesCard({required this.match});
   @override
   Widget build(BuildContext context) {
     double screen_height = MediaQuery.of(context).size.height;
@@ -24,9 +27,9 @@ class MatchesCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
-          Text("Man City",style: TextStyle(fontWeight: FontWeight.w700,color: ColorConst.matches_name_color),),
+          Text(match.club1.name,style: TextStyle(fontWeight: FontWeight.w700,color: ColorConst.matches_name_color),),
           Image.network(
-            "https://pbs.twimg.com/profile_images/1605149215151235078/QlVBaoHu_400x400.jpg",
+            match.club1.logo,
             height: screen_height / 20,
             width: screen_height / 20,
           ),
@@ -52,11 +55,11 @@ class MatchesCard extends StatelessWidget {
             ],
           ),
           Image.network(
-            "https://pbs.twimg.com/profile_images/1631927919068037122/bHH3TkIJ_400x400.jpg",
+            match.club2.logo,
             height: screen_height / 20,
             width: screen_height / 20,
           ),
-          Text("Palace",style: TextStyle(fontWeight: FontWeight.w700,color: ColorConst.matches_name_color),),
+          Text(match.club2.name,style: TextStyle(fontWeight: FontWeight.w700,color: ColorConst.matches_name_color),),
         ],
       ),
     );
