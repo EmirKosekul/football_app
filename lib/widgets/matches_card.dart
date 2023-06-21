@@ -23,7 +23,7 @@ class MatchesCard extends StatelessWidget {
             BorderRadius.all(Radius.circular(BoxDecorationConst.rounded_box)),
       ),
       height: screen_height / 10,
-      width: screen_width / 1.5,
+      width: screen_width / 1.2,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -36,7 +36,7 @@ class MatchesCard extends StatelessWidget {
           Column(
             children: [
               Container(
-                height: screen_height / 50,
+                height: screen_height / 30,
               ),
               Text(
                 "16:30",
@@ -46,7 +46,7 @@ class MatchesCard extends StatelessWidget {
                     fontSize: screen_height / 50),
               ),
               Container(
-                height: screen_height / 200,
+                height: screen_height / 130,
               ),
               Text("30 OCT",
                   style: TextStyle(
