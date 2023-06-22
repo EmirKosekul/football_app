@@ -16,10 +16,9 @@ class MatchDetailCard extends StatelessWidget {
       height: screen_height / 4,
       width: screen_width / 1.5,
       decoration: BoxDecoration(
-        color: ColorConst.live_match_color,
-        borderRadius:
-            BorderRadius.all(Radius.circular(BoxDecorationConst.rounded_box)),
-      ),
+          color: ColorConst.live_match_color,
+          borderRadius:
+              BorderRadius.all(Radius.circular(BoxDecorationConst.rounded_box)),),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -41,8 +40,14 @@ class MatchDetailCard extends StatelessWidget {
                     height: screen_height / 10,
                     width: screen_width / 10,
                   ),
-                  Text(match.club1.name,style: TextStyle(color: Colors.white),),
-                  Text(match.home,style: TextStyle(color:ColorConst.matches_date_color),),
+                  Text(
+                    match.club1.name,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    match.home,
+                    style: TextStyle(color: ColorConst.matches_date_color),
+                  ),
                 ],
               ),
               Column(
@@ -53,19 +58,25 @@ class MatchDetailCard extends StatelessWidget {
                     style: TextStyle(
                       color: Colors.white,
                       fontWeight: FontWeight.bold,
-                      fontSize: screen_height/20,
-                      ),
-                  ),          
-                  Container(height: screen_height/50,), 
-                  Container(       
-                    height: screen_width/15,   
-                    width: screen_width/10,      
+                      fontSize: screen_height / 20,
+                    ),
+                  ),
+                  Container(
+                    height: screen_height / 50,
+                  ),
+                  Container(
+                    height: screen_width / 15,
+                    width: screen_width / 10,
                     child: Padding(
                       padding: const EdgeInsets.all(8.0),
-                      child: Center(child: Text("83'",style: TextStyle(color: Colors.white),)),
+                      child: Center(
+                          child: Text(
+                        "83'",
+                        style: TextStyle(color: Colors.white),
+                      )),
                     ),
                     decoration: BoxDecoration(
-                      color:ColorConst.live_match_time_background_color,
+                      color: ColorConst.live_match_time_background_color,
                       border: Border.all(
                           color: ColorConst.live_match_time_border_color),
                       borderRadius: BorderRadius.all(
@@ -81,8 +92,14 @@ class MatchDetailCard extends StatelessWidget {
                     height: screen_height / 10,
                     width: screen_width / 10,
                   ),
-                  Text(match.club2.name,style: TextStyle(color: Colors.white),),
-                  Text(match.away,style: TextStyle(color:ColorConst.matches_date_color),),
+                  Text(
+                    match.club2.name,
+                    style: TextStyle(color: Colors.white),
+                  ),
+                  Text(
+                    match.away,
+                    style: TextStyle(color: ColorConst.matches_date_color),
+                  ),
                 ],
               ),
             ],

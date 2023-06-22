@@ -3,9 +3,9 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
 import 'package:football_app/data/match_data.dart';
-import 'package:football_app/models/todays_match.dart';
-import 'package:football_app/widgets/live_matches_card.dart';
-import 'package:football_app/widgets/matches_card.dart';
+import 'package:football_app/widgets/scroll_league_buttons.dart';
+import 'package:football_app/widgets/scroll_live_matchs.dart';
+import 'package:football_app/widgets/scroll_matchs.dart';
 
 class MyHomePage extends StatelessWidget {
   var matches = MatchData().club_list;
@@ -18,11 +18,12 @@ class MyHomePage extends StatelessWidget {
       body: Center(
         child: Column(
           children: [
+            ScrollLeagueButtons(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(left: 20,top: 20),
+                  padding: const EdgeInsets.only(left: 20),
                   child: Text(
                     "Live Match",
                     style: TextStyle(
@@ -34,23 +35,7 @@ class MyHomePage extends StatelessWidget {
                 Container(width: screen_width/2,)
               ],
             ),
-            SingleChildScrollView(
-              scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.all(screen_width / 10),
-              child: Row(
-                children: [
-                  LiveMatchesCard(
-                    match: matches[1],
-                  ),
-                  Container(
-                    width: 50,
-                  ),
-                  LiveMatchesCard(
-                    match: matches[0],
-                  ),
-                ],
-              ),
-            ),
+            ScrollLiveMatchs(),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -72,18 +57,7 @@ class MyHomePage extends StatelessWidget {
                 )
               ],
             ),
-            Container(
-              height: 20,
-            ),
-            MatchesCard(
-              match: matches[0],
-            ),
-            Container(
-              height: 10,
-            ),
-            MatchesCard(
-              match: matches[1],
-            ),
+            ScrollMatchs(),
           ],
         ),
       ),

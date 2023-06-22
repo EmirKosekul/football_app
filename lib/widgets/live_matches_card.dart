@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
@@ -6,8 +6,9 @@ import 'package:football_app/core/decoration_const/box_decoration.dart';
 import 'package:football_app/models/todays_match.dart';
 
 class LiveMatchesCard extends StatelessWidget {
-  TodaysMatch match;
-  LiveMatchesCard({required this.match});
+  final TodaysMatch match;
+  final Color color;
+  LiveMatchesCard({required this.match, required this.color});
   @override
   Widget build(BuildContext context) {
     double screen_height = MediaQuery.of(context).size.height;
@@ -16,13 +17,14 @@ class LiveMatchesCard extends StatelessWidget {
       height: screen_height / 4,
       width: screen_width / 1.5,
       decoration: BoxDecoration(
-        color: ColorConst.live_match_color,
+        color: color,
         borderRadius:
             BorderRadius.all(Radius.circular(BoxDecorationConst.rounded_box)),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
+          Container(height:screen_height/60),
           Text(
             match.league,
             style: TextStyle(color: Colors.white),
@@ -61,15 +63,19 @@ class LiveMatchesCard extends StatelessWidget {
                     height: screen_width/15,   
                     width: screen_width/10,      
                     child: Padding(
-                      padding: const EdgeInsets.all(8.0),
+                      padding: const EdgeInsets.all(0),
                       child: Center(child: Text("83'",style: TextStyle(color: Colors.white),)),
                     ),
                     decoration: BoxDecoration(
                       color:ColorConst.live_match_time_background_color,
                       border: Border.all(
-                          color: ColorConst.live_match_time_border_color),
+                          color: ColorConst.live_match_time_border_color,
+                          width:4,
+                          ),                         
                       borderRadius: BorderRadius.all(
-                          Radius.circular(BoxDecorationConst.rounded_box)),
+                          Radius.circular(BoxDecorationConst.rounded_box)
+                          ),
+                          
                     ),
                   )
                 ],
