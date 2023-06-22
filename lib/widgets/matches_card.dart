@@ -47,7 +47,7 @@ class MatchesCard extends StatelessWidget {
           Column(
             children: [
               Container(
-                height: screen_height / 30,
+                height: screen_height / 40,
               ),
               Text(
                 "16:30",

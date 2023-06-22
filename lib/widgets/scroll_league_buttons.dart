@@ -11,7 +11,7 @@ class ScrollLeagueButtons extends StatelessWidget{
     double screen_width = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.all(screen_width / 10),
+              padding: EdgeInsets.only(left:screen_width / 13,top:screen_width / 10,bottom:screen_width / 17),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [

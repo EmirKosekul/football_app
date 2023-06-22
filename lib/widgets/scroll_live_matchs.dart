@@ -13,7 +13,7 @@ class ScrollLiveMatchs extends StatelessWidget{
     double screen_width = MediaQuery.of(context).size.width;
     return SingleChildScrollView(
               scrollDirection: Axis.horizontal,
-              padding: EdgeInsets.all(screen_width / 10),
+              padding: EdgeInsets.only(left:screen_width / 10,top:screen_width / 25,bottom:screen_width / 15),
               child: Row(
                 children: [
                   LiveMatchesCard(

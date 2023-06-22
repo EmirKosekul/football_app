@@ -3,17 +3,28 @@
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
 import 'package:football_app/data/match_data.dart';
+import 'package:football_app/widgets/appbar_mainpage.dart';
+import 'package:football_app/widgets/navigation_bar.dart';
 import 'package:football_app/widgets/scroll_league_buttons.dart';
 import 'package:football_app/widgets/scroll_live_matchs.dart';
 import 'package:football_app/widgets/scroll_matchs.dart';
+import 'package:google_fonts/google_fonts.dart';
 
-class MyHomePage extends StatelessWidget {
+class MyHomePage extends StatefulWidget {
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+
+class _MyHomePageState extends State<MyHomePage> {
   var matches = MatchData().club_list;
+
   @override
   Widget build(BuildContext context) {
     double screen_height = MediaQuery.of(context).size.height;
     double screen_width = MediaQuery.of(context).size.width;
     return Scaffold(
+      appBar: AppBarrMainPage(),
+      bottomNavigationBar: MyNavigationBar(),
       backgroundColor: ColorConst.scaffold_color,
       body: Center(
         child: Column(
@@ -22,9 +33,9 @@ class MyHomePage extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Padding(
+               Padding(
                   padding: const EdgeInsets.only(left: 20),
-                  child: Text(
+                   child:Text(
                     "Live Match",
                     style: TextStyle(
                         color: ColorConst.matches_name_color,
