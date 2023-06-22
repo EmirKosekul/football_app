@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, must_be_immutable, use_key_in_widget_constructors, non_constant_identifier_names, sort_child_properties_last
 
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';

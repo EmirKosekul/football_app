@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:football_app/views/main_page.dart';
+import 'package:football_app/views/detail_page.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
@@ -20,7 +20,7 @@ class MyApp extends StatelessWidget {
           Theme.of(context).textTheme,
         )
       ),
-      home: MyHomePage(),
+      home: DetailPage(),
     );
   }
 }

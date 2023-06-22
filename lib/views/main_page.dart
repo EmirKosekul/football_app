@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, non_constant_identifier_names, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
@@ -8,7 +8,6 @@ import 'package:football_app/widgets/navigation_bar.dart';
 import 'package:football_app/widgets/scroll_league_buttons.dart';
 import 'package:football_app/widgets/scroll_live_matchs.dart';
 import 'package:football_app/widgets/scroll_matchs.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class MyHomePage extends StatefulWidget {
   @override

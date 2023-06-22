@@ -1,4 +1,4 @@
-// ignore_for_file: use_key_in_widget_constructors, must_be_immutable
+// ignore_for_file: use_key_in_widget_constructors, must_be_immutable, non_constant_identifier_names
 
 import 'package:flutter/material.dart';
 import 'package:football_app/data/match_data.dart';

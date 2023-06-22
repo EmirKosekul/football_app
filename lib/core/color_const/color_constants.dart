@@ -11,5 +11,5 @@ class ColorConst {
   static const Color live_match_time_border_color = Color.fromARGB(255,143,38,104);
   static const Color live_match_time_background_color = Color.fromARGB(255,101,54,103);
   static const Color league_button_color = Color.fromARGB(255,255,40,130);
-  
+  static const Color detail_stats_alpha_color = Color.fromARGB(255, 241,223,234);
 }
