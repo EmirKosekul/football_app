@@ -48,7 +48,6 @@ class LiveMatchesCard extends StatelessWidget {
                   ),
                   Text(match.club1.name,style: TextStyle(color: text_color),),
                   Text(match.home,style: TextStyle(color:ColorConst.matches_date_color),),
-                  Container(height: 10,),
                 ],
               ),
               Column(
@@ -96,7 +95,6 @@ class LiveMatchesCard extends StatelessWidget {
                   ),
                   Text(match.club2.name,style: TextStyle(color: text_color),),
                   Text(match.away,style: TextStyle(color:ColorConst.matches_date_color),),
-                  Container(height: 10,)
                 ],
               ),
             ],

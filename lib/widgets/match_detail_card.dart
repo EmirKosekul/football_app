@@ -14,7 +14,7 @@ class MatchDetailCard extends StatelessWidget {
     double screen_height = MediaQuery.of(context).size.height;
     double screen_width = MediaQuery.of(context).size.width;
     return Container(
-      height: screen_height / 4,
+      height: screen_height / 3.8,
       width: screen_width / 1.2,
       decoration: BoxDecoration(
           color: Colors.white,
