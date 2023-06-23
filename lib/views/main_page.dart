@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
+import 'package:football_app/data/live_match_data.dart';
 import 'package:football_app/data/match_data.dart';
 import 'package:football_app/widgets/appbar_mainpage.dart';
 import 'package:football_app/widgets/navigation_bar.dart';
@@ -16,6 +17,7 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage> {
   var matches = MatchData().club_list;
+  var live_matches = LiveMatchData().club_list;
 
   @override
   Widget build(BuildContext context) {

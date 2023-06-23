@@ -8,6 +8,7 @@ class LiveMatchStats{
   String week;
   String home="Home";
   String away="Away";
+  String stadium_name;
   FootballClub club1;
   FootballClub club2;
   MatchStats club1_stats;
@@ -19,5 +20,6 @@ class LiveMatchStats{
     required this.week,
     required this.club1_stats,
     required this.club2_stats,
+    required this.stadium_name,
   });
 }

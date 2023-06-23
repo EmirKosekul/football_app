@@ -15,7 +15,7 @@ class ScrollLeagueButtons extends StatelessWidget{
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
-                  LeaguesButtons(color:ColorConst.league_button_color,league_name:"Premier League",league_name_color: Colors.white,),
+                  LeaguesButtons(color:Colors.pinkAccent,league_name:"Premier League",league_name_color: Colors.white,),
                   Container(width: screen_width/20,),
                   LeaguesButtons(color:Colors.white,league_name:"La Liga",league_name_color: ColorConst.matches_date_color,),
                   Container(width: screen_width/20,),

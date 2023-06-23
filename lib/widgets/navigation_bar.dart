@@ -17,7 +17,7 @@ class _MyNavigationBarState extends State<MyNavigationBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       backgroundColor: Colors.white,
-      selectedItemColor: ColorConst.league_button_color,
+      selectedItemColor: Colors.pinkAccent,
       unselectedItemColor: ColorConst.matches_date_color,
       items: [
         BottomNavigationBarItem(icon: Icon(Icons.home),label:"."),

@@ -19,13 +19,15 @@ class ScrollLiveMatchs extends StatelessWidget{
                   LiveMatchesCard(
                     match: matches[1],
                     color: ColorConst.live_match_color,
+                    text_color: Colors.white,
                   ),
                   Container(
                     width: 50,
                   ),
                   LiveMatchesCard(
-                    match: matches[0],
+                    match: matches[2],
                     color: Color.fromARGB(255, 250,250,250),
+                    text_color: Colors.black87,
                   ),
                 ],
               ),

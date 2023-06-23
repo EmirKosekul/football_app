@@ -25,19 +25,19 @@ class ScrollMatchs extends StatelessWidget {
               height: screen_height/45,
             ),
             MatchesCard(
-              match: matches[1],
+              match: matches[3],
             ),
             Container(
               height: screen_height/45,
             ),
             MatchesCard(
-              match: matches[1],
+              match: matches[4],
             ),
             Container(
               height: screen_height/45,
             ),
             MatchesCard(
-              match: matches[1],
+              match: matches[2],
             ),
           ],
         ),

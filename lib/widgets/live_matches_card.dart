@@ -4,11 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:football_app/core/color_const/color_constants.dart';
 import 'package:football_app/core/decoration_const/box_decoration.dart';
 import 'package:football_app/models/todays_match.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 class LiveMatchesCard extends StatelessWidget {
   final TodaysMatch match;
   final Color color;
-  LiveMatchesCard({required this.match, required this.color});
+  final Color text_color;
+  LiveMatchesCard({required this.match, required this.color,required this.text_color});
   @override
   Widget build(BuildContext context) {
     double screen_height = MediaQuery.of(context).size.height;
@@ -27,8 +29,9 @@ class LiveMatchesCard extends StatelessWidget {
           Container(height:screen_height/60),
           Text(
             match.league,
-            style: TextStyle(color: Colors.white),
+            style: TextStyle(color: text_color),
           ),
+          Container(height: 6,),
           Text(
             match.week,
             style: TextStyle(color: ColorConst.matches_date_color),
@@ -40,42 +43,46 @@ class LiveMatchesCard extends StatelessWidget {
                 children: [
                   Image.network(
                     match.club1.logo,
-                    height: screen_height / 10,
-                    width: screen_width / 10,
+                    height: screen_height / 8,
+                    width: screen_width / 8,
                   ),
-                  Text(match.club1.name,style: TextStyle(color: Colors.white),),
+                  Text(match.club1.name,style: TextStyle(color: text_color),),
                   Text(match.home,style: TextStyle(color:ColorConst.matches_date_color),),
+                  Container(height: 10,),
                 ],
               ),
               Column(
                 mainAxisAlignment: MainAxisAlignment.spaceAround,
                 children: [
                   Text(
-                    "0 : 3",
-                    style: TextStyle(
-                      color: Colors.white,
+                    "0 : 3 ",
+                    style: GoogleFonts.robotoSlab(
+                      color: text_color,
                       fontWeight: FontWeight.bold,
-                      fontSize: screen_height/20,
+                      fontSize: screen_height/25,
                       ),
                   ),          
                   Container(height: screen_height/50,), 
-                  Container(       
-                    height: screen_width/15,   
-                    width: screen_width/10,      
-                    child: Padding(
-                      padding: const EdgeInsets.all(0),
-                      child: Center(child: Text("83'",style: TextStyle(color: Colors.white),)),
-                    ),
-                    decoration: BoxDecoration(
-                      color:ColorConst.live_match_time_background_color,
-                      border: Border.all(
-                          color: ColorConst.live_match_time_border_color,
-                          width:4,
-                          ),                         
-                      borderRadius: BorderRadius.all(
-                          Radius.circular(BoxDecorationConst.rounded_box)
-                          ),
-                          
+                  Padding(
+                    padding: const EdgeInsets.only(right:5),
+                    child: Container(       
+                      height: screen_height/25,   
+                      width: screen_width/8.5,      
+                      child: Padding(
+                        padding: const EdgeInsets.only(right:0),
+                        child: Center(child: Text("83'",style: TextStyle(color: Colors.white),)),
+                      ),
+                      decoration: BoxDecoration(
+                        color:ColorConst.live_match_time_background_color,
+                        border: Border.all(
+                            color: ColorConst.live_match_time_border_color,
+                            width: 3,
+                            ),                         
+                        borderRadius: BorderRadius.all(
+                            Radius.circular(BoxDecorationConst.rounded_box)
+                            ),
+                            
+                      ),
                     ),
                   )
                 ],
@@ -84,11 +91,12 @@ class LiveMatchesCard extends StatelessWidget {
                 children: [
                   Image.network(
                     match.club2.logo,
-                    height: screen_height / 10,
-                    width: screen_width / 10,
+                    height: screen_height / 8,
+                    width: screen_width / 8,
                   ),
-                  Text(match.club2.name,style: TextStyle(color: Colors.white),),
+                  Text(match.club2.name,style: TextStyle(color: text_color),),
                   Text(match.away,style: TextStyle(color:ColorConst.matches_date_color),),
+                  Container(height: 10,)
                 ],
               ),
             ],

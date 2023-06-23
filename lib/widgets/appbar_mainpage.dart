@@ -16,7 +16,7 @@ class AppBarrMainPage extends StatelessWidget implements PreferredSizeWidget {
           children: [
             Text("Live",style:GoogleFonts.dosis(fontSize: 30,color:ColorConst.matches_name_color,fontWeight: FontWeight.w400)),
             Text("Sc",style:GoogleFonts.dosis(fontWeight: FontWeight.bold,color:ColorConst.matches_name_color,fontSize: 30)),
-            Text("o",style:GoogleFonts.dosis(fontWeight: FontWeight.bold,color:ColorConst.league_button_color,fontSize: 30)),
+            Text("o",style:GoogleFonts.dosis(fontWeight: FontWeight.bold,color:Colors.pinkAccent,fontSize: 30)),
             Text("re",style:GoogleFonts.dosis(fontWeight: FontWeight.bold,color:ColorConst.matches_name_color,fontSize: 30)),
           ],
         ),

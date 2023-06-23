@@ -28,7 +28,7 @@ class MatchesCard extends StatelessWidget {
               offset: Offset(0.0, 3.0),
             )
           ]),
-      height: screen_height / 10,
+      height: screen_height / 15,
       width: screen_width / 1.2,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
@@ -41,23 +41,23 @@ class MatchesCard extends StatelessWidget {
           ),
           Image.network(
             match.club1.logo,
-            height: screen_height / 20,
-            width: screen_height / 20,
+            height: screen_height / 25,
+            width: screen_height / 25,
           ),
           Column(
             children: [
               Container(
-                height: screen_height / 40,
+                height: screen_height / 90,
               ),
               Text(
-                "16:30",
+                "06:30",
                 style: TextStyle(
                     color: ColorConst.matches_clock_color,
                     fontWeight: FontWeight.bold,
                     fontSize: screen_height / 50),
               ),
               Container(
-                height: screen_height / 130,
+                height: screen_height / 160,
               ),
               Text("30 OCT",
                   style: TextStyle(
@@ -67,8 +67,8 @@ class MatchesCard extends StatelessWidget {
           ),
           Image.network(
             match.club2.logo,
-            height: screen_height / 20,
-            width: screen_height / 20,
+            height: screen_height / 25,
+            width: screen_height / 25,
           ),
           Text(
             match.club2.name,

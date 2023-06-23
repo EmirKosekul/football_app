@@ -41,13 +41,23 @@ class _LiveStatsState extends State<LiveStats> {
               height: screen_height/50,
             ),
             Row(
-              mainAxisAlignment: MainAxisAlignment.spaceAround,
+              //mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
-                Text(widget.x.toInt().toString(),style: TextStyle(color:widget.decider ? Colors.pink : ColorConst.live_match_color,),),
-                Text(widget.text),
-                Text(widget.y.toInt().toString(),style: TextStyle(color:widget.decider ? ColorConst.live_match_color : Colors.pink,),),
+                  Padding(
+                    padding: EdgeInsets.only(left:screen_width/20),
+                    child: Text(widget.x.toInt().toString(),style: TextStyle(color:widget.decider ? Colors.pink : ColorConst.live_match_color,),),
+                  ), 
+                  Spacer(),
+                  Text(widget.text),
+                  Spacer(),
+                  Padding(
+                    padding: EdgeInsets.only(right:screen_width/20),
+                    child: Text(widget.y.toInt().toString(),style: TextStyle(color:widget.decider ? ColorConst.live_match_color : Colors.pink,),),
+                  ),
+                
               ],
             ),
+            Container(height: 7,),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
@@ -56,7 +66,7 @@ class _LiveStatsState extends State<LiveStats> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  height: 10.0,
+                  height: 7,
                   width: screen_width / 3,
                   child: Stack(
                     alignment: Alignment.centerLeft,
@@ -64,7 +74,7 @@ class _LiveStatsState extends State<LiveStats> {
                       Positioned.fill(
                         child: LinearProgressIndicator(
                           value: 1-widget.x_new,
-                          backgroundColor:widget.decider ? Colors.pink : ColorConst.live_match_color,
+                          backgroundColor:widget.decider ? Colors.pinkAccent : ColorConst.live_match_color,
                           color: ColorConst.detail_stats_alpha_color,                          
                         ),
                       ),
@@ -76,7 +86,7 @@ class _LiveStatsState extends State<LiveStats> {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20.0),
                   ),
-                  height: 10.0,
+                  height: 7,
                   width: screen_width / 3,
                   child: Stack(
                     alignment: Alignment.centerLeft,
@@ -84,7 +94,7 @@ class _LiveStatsState extends State<LiveStats> {
                       Positioned.fill(
                         child: LinearProgressIndicator(
                           value: widget.y_new,
-                          color: widget.decider ? ColorConst.live_match_color : Colors.pink,
+                          color: widget.decider ? ColorConst.live_match_color : Colors.pinkAccent,
                           backgroundColor: ColorConst.detail_stats_alpha_color,
                         ),
                       ),
